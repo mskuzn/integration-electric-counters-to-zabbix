@@ -1,0 +1,3 @@
+http://localhost/zabbix/screens.php?ddreset=1
+
+sudo python3 ~/Рабочий\ стол/Python_scripts/polling_and_write_data.py

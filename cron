@@ -1,0 +1,1 @@
+0-59 * * * * root python3 /home/pm-energo-server/Рабочий\ стол/Python_scripts/polling_and_write_data.py

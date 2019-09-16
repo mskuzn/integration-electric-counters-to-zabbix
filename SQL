@@ -1,0 +1,13 @@
+
+with energo_counters as (select hg.hostid as gr_name from groups g
+left join hosts_groups hg on hg.groupid=g.groupid
+where g.name like 'energo_counters')
+
+
+select timestamp with time zone 'epoch' + clock* interval '1 second',hstr.*,itm.* from items itm 
+left join history_uint hstr on hstr.itemid=itm.itemid
+where hostid in (select * from energo_counters)
+
+
+;
+
